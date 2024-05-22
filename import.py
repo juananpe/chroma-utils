@@ -15,7 +15,7 @@ if len(sys.argv) > 2:
     collection_name = sys.argv[1]
     filename = sys.argv[2]
 else:
-    print("Error: Collection name and filename are required as the first and second command-line arguments")
+    print("Usage: python import.py <collection_name> <json_file_name>")
     sys.exit(1)
 
 client = chromadb.HttpClient(host="localhost", port="8008")

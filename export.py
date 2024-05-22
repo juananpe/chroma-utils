@@ -13,7 +13,7 @@ load_dotenv()
 if len(sys.argv) > 1:
     collection_name = sys.argv[1]
 else:
-    print("Error: Collection name is required as the first command-line argument")
+    print("Usage: python export.py <collection_name>")
     sys.exit(1)
 
 client = chromadb.HttpClient(host="localhost", port="8008")
